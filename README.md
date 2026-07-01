@@ -1,4 +1,4 @@
-# PWebion Technology - Design Agency Homepage
+# Webion Technology - Design Agency Homepage
 
 A simple, clean homepage for a fictional design agency called **Webion Technology**, built for the Next.js Developer Internship task.
 
