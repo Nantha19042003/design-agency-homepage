@@ -39,7 +39,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
         <a className="navbar-brand" href="#home">
-          Webion<span>Technology</span>
+          Webion<span> Technology</span>
         </a>
 
         <button
