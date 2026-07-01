@@ -1,0 +1,164 @@
+/* ==========================================================
+   Global styles for the Design Agency homepage
+   Bootstrap handles the grid + base components, this file
+   just adds simple colors, fonts and a few small effects.
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+:root {
+  --color-dark: #1c1c1e;
+  --color-dark-soft: #2a2a2d;
+  --color-accent: #ff6b35;
+  --color-light-bg: #f7f7f5;
+  --color-muted: #6c6f73;
+}
+
+body {
+  color: var(--color-dark);
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand-logo {
+  font-family: "Poppins", sans-serif;
+}
+
+/* small underline under section titles, keeps things simple
+   but still gives every section a bit of identity */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-dark-soft {
+  background-color: var(--color-dark-soft);
+}
+
+/* ---------------- Buttons ---------------- */
+
+.btn-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn-accent:hover {
+  background-color: #e85a25;
+  border-color: #e85a25;
+  color: #ffffff;
+}
+
+/* ---------------- Hero section ---------------- */
+
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  /* extra top padding so the fixed navbar doesn't cover the heading */
+  padding-top: 80px;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-soft) 100%);
+  color: #ffffff;
+}
+
+.hero-section p {
+  color: #d9d9d9;
+}
+
+/* ---------------- Service cards ---------------- */
+
+.service-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+/* ---------------- Portfolio grid ---------------- */
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.06);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.55);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* ---------------- Contact section ---------------- */
+
+.contact-section {
+  background-color: var(--color-light-bg);
+}
+
+/* ---------------- Footer ---------------- */
+
+.site-footer {
+  background-color: var(--color-dark);
+  color: #b3b3b3;
+}
+
+/* respect people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .portfolio-item img,
+  .portfolio-overlay {
+    transition: none;
+  }
+}
